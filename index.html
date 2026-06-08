@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velion Lite — Боты, сайты и AI-автоматизация. От 3 000 ₽</title>
+<meta name="description" content="Простые цифровые продукты для малого бизнеса. Боты, лендинги, AI-автоматизация от 3 000 ₽, срок 2–7 дней.">
+<meta name="keywords" content="telegram бот, лендинг, ai автоматизация, чат-бот, velion lite, малый бизнес">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #05070A;
+  --bg-card: #0B0F14;
+  --bg-card2: #0F141A;
+  --text: #F0F4F8;
+  --text-dim: #8A9BB0;
+  --text-muted: #4A5568;
+  --accent: #A855F7;
+  --accent2: #7C3AED;
+  --accent-glow: rgba(168,85,247,0.18);
+  --accent-soft: rgba(168,85,247,0.06);
+  --green: #11E0C6;
+  --green-glow: rgba(17,224,198,0.12);
+  --line: rgba(255,255,255,0.07);
+  --line-strong: rgba(255,255,255,0.14);
+  --mono: 'Courier New', monospace;
+  --radius: 20px;
+  --header-h: 72px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+
+/* ===== NOISE TEXTURE ===== */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;opacity:0.4;
+}
+
+/* ===== WRAP ===== */
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;position:relative;z-index:1}
+@media(max-width:600px){.wrap{padding:0 20px}}
+
+/* ===== LIQUID GLASS NAVBAR ===== */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  padding:0;
+}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 32px;
+  border-radius:0;
+  width:100%;
+  background:linear-gradient(135deg,rgba(168,85,247,0.10) 0%,rgba(255,255,255,0.05) 40%,rgba(124,58,237,0.06) 100%);
+  backdrop-filter:blur(28px) saturate(180%) brightness(1.08);
+  -webkit-backdrop-filter:blur(28px) saturate(180%) brightness(1.08);
+  border:1px solid rgba(168,85,247,0.18);
+  box-shadow:0 2px 0 rgba(255,255,255,0.08) inset, 0 8px 32px -8px rgba(0,0,0,0.5), 0 2px 8px rgba(168,85,247,0.1);
+  position:relative;overflow:hidden;
+}
+.nav-inner::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,rgba(255,255,255,0.18) 0%,rgba(255,255,255,0) 38%);
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;position:relative;z-index:1}
+.logo-icon{
+  width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  font-family:'Unbounded',sans-serif;font-weight:900;font-size:16px;color:#fff;
+  box-shadow:0 4px 14px rgba(168,85,247,0.45);
+  flex-shrink:0;
+}
+.logo-text{
+  font-family:'Unbounded',sans-serif;font-weight:700;font-size:16px;
+  letter-spacing:-0.02em;
+}
+.logo-text .lite{
+  color:var(--accent);font-weight:500;
+}
+.logo-sub{
+  font-family:var(--mono);font-size:9px;color:var(--text-muted);
+  letter-spacing:0.08em;margin-top:2px;display:block;
+}
+.nav-links{display:flex;gap:4px;position:relative;z-index:1}
+.nav-links a{
+  font-size:13px;font-weight:500;color:var(--text-dim);
+  padding:5px 12px;border-radius:999px;transition:background 0.2s,color 0.2s;
+}
+.nav-links a:hover{background:rgba(255,255,255,0.08);color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:8px;position:relative;z-index:1}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 20px;border-radius:12px;font-weight:600;font-size:13px;
+  transition:all 0.22s;white-space:nowrap;cursor:pointer;border:none;
+}
+.btn-primary{
+  background:linear-gradient(100deg,var(--accent),var(--accent2));
+  color:#fff;
+  box-shadow:0 8px 24px -8px rgba(168,85,247,0.5);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(168,85,247,0.7)}
+.btn-ghost{
+  background:transparent;color:var(--text);
+  border:1px solid var(--line-strong);
+}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== MOBILE MENU ===== */
+.ham{width:22px;height:16px;display:none;flex-direction:column;justify-content:space-between;cursor:pointer;background:none;border:none;padding:0}
+.ham span{display:block;height:2px;border-radius:2px;background:var(--text-dim);transition:transform .28s,opacity .28s}
+.mob-menu{display:none;position:fixed;inset-x:0;top:80px;z-index:49;padding:0 20px}
+.mob-menu.open{display:block}
+.mob-drawer{
+  border-radius:20px;
+  background:linear-gradient(150deg,rgba(168,85,247,0.12) 0%,rgba(10,14,20,0.9) 100%);
+  backdrop-filter:blur(28px) saturate(180%);
+  border:1px solid rgba(168,85,247,0.15);
+  box-shadow:0 24px 60px -12px rgba(0,0,0,0.6);
+  padding:20px;
+  animation:slideDown .28s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes slideDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+.mob-link{
+  display:block;padding:12px 16px;border-radius:12px;
+  font-size:15px;font-weight:600;color:var(--text-dim);
+  transition:background .18s,color .18s;
+}
+.mob-link:hover{background:rgba(255,255,255,0.06);color:var(--text)}
+.mob-divider{height:1px;background:rgba(255,255,255,0.07);margin:8px 0}
+
+/* ===== SECTION ===== */
+.section{padding:80px 0;position:relative;z-index:1}
+.section-head{margin-bottom:56px}
+.label{
+  font-family:var(--mono);font-size:11px;color:var(--accent);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:16px;
+}
+.section-title{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(26px,3.5vw,40px);font-weight:600;
+  line-height:1.08;letter-spacing:-0.03em;margin-bottom:16px;
+}
+.section-title .accent{color:var(--accent)}
+.section-sub{font-size:17px;color:var(--text-dim);max-width:560px;line-height:1.6}
+
+/* ===== HERO ===== */
+.hero{padding:120px 0 80px;position:relative;z-index:1}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;color:var(--text-muted);
+  letter-spacing:0.12em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;
+  border:1px solid var(--line-strong);
+  margin-bottom:28px;
+}
+.hero-eyebrow::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 8px var(--accent);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 8px var(--accent)}50%{opacity:0.5;box-shadow:0 0 16px var(--accent)}}
+.hero h1{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(36px,6vw,80px);
+  font-weight:700;line-height:1.05;letter-spacing:-0.03em;
+  margin-bottom:28px;
+}
+.hero h1 .accent{color:var(--accent)}
+.hero h1 .dim{color:var(--text-muted);font-weight:500}
+.hero-sub{
+  font-size:clamp(15px,1.4vw,18px);color:var(--text-dim);
+  max-width:560px;line-height:1.6;margin-bottom:40px;
+}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:64px}
+.hero-stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.hero-stat{
+  padding:28px 0;border-right:1px solid var(--line);
+  padding-right:24px;
+}
+.hero-stat:not(:first-child){padding-left:24px}
+.hero-stat:last-child{border-right:none}
+.hero-stat-num{
+  font-family:'Unbounded',sans-serif;font-size:38px;font-weight:800;
+  color:var(--accent);letter-spacing:-0.03em;line-height:1;margin-bottom:6px;
+}
+.hero-stat-label{
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+
+/* ===== MARQUEE ===== */
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:16px 0;overflow:hidden;background:var(--bg-card);
+}
+.marquee-track{
+  display:flex;gap:56px;white-space:nowrap;
+  animation:scroll 28s linear infinite;
+  font-family:var(--mono);font-size:12px;color:var(--text-muted);
+}
+.marquee-track span{display:flex;align-items:center;gap:56px}
+.marquee-track span::after{content:'//';color:var(--accent)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== PRODUCTS GRID ===== */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-template-rows:auto;
+  gap:14px;
+}
+.product{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  display:flex;flex-direction:column;
+  transition:border-color .22s,transform .22s;
+  position:relative;overflow:hidden;
+}
+.product::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  background:radial-gradient(ellipse 60% 40% at 0% 0%,rgba(168,85,247,0.06) 0%,transparent 60%);
+  pointer-events:none;opacity:0;transition:opacity .3s;
+}
+.product:hover{border-color:rgba(168,85,247,0.3);transform:translateY(-2px)}
+.product:hover::before{opacity:1}
+.product.size-big{grid-column:span 2}
+.product-head{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  margin-bottom:16px;gap:8px;
+}
+.product-id{
+  font-family:var(--mono);font-size:10px;color:var(--accent);
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.product-time{
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  white-space:nowrap;
+}
+.product h3{
+  font-family:'Unbounded',sans-serif;font-size:18px;font-weight:700;
+  letter-spacing:-0.02em;margin-bottom:12px;
+}
+.product-desc{font-size:14px;color:var(--text-dim);line-height:1.6;flex:1}
+.product-features{
+  list-style:none;margin:16px 0 0;
+}
+.product-features li{
+  font-size:13px;color:var(--text-dim);padding:4px 0;
+  display:flex;align-items:center;gap:10px;
+}
+.product-features li::before{
+  content:'→';color:var(--accent);font-size:12px;flex-shrink:0;
+}
+.product-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:20px;padding-top:16px;border-top:1px solid var(--line);
+}
+.product-price{
+  font-family:'Unbounded',sans-serif;font-size:17px;font-weight:700;
+  color:var(--text);
+}
+.product-price small{
+  display:block;font-family:var(--mono);font-size:9px;
+  color:var(--text-muted);font-weight:400;letter-spacing:0.05em;margin-top:3px;
+  font-style:normal;
+}
+.product-arrow{
+  width:38px;height:38px;border-radius:10px;
+  display:grid;place-items:center;
+  background:var(--accent-soft);border:1px solid rgba(168,85,247,0.2);
+  color:var(--accent);font-size:18px;
+  transition:background .2s,transform .2s;
+}
+.product-arrow:hover{background:rgba(168,85,247,0.15);transform:translateX(3px)}
+
+/* ===== STEPS ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative}
+.steps::before{
+  content:'';position:absolute;
+  top:28px;left:12%;right:12%;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent);
+}
+.step{
+  padding:0 20px;text-align:center;
+  position:relative;
+}
+.step-dot{
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);margin:0 auto 24px;
+  box-shadow:0 0 0 4px rgba(168,85,247,0.15);
+  position:relative;z-index:1;
+}
+.step-num{
+  font-family:var(--mono);font-size:10px;color:var(--accent);
+  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;
+}
+.step h4{
+  font-family:'Unbounded',sans-serif;font-size:15px;font-weight:700;
+  margin-bottom:10px;letter-spacing:-0.01em;
+}
+.step p{font-size:13px;color:var(--text-dim);line-height:1.6}
+.step-time{
+  margin-top:14px;font-family:var(--mono);font-size:11px;
+  display:flex;flex-direction:column;gap:2px;align-items:center;
+}
+.step-time span{color:var(--text-muted)}
+.step-time .v{color:var(--accent);font-weight:700}
+
+/* ===== BENTO ===== */
+.bento{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:auto;
+  gap:14px;
+}
+.bento-card{
+  background:var(--bg-card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px;
+  transition:border-color .22s;
+}
+.bento-card:hover{border-color:rgba(168,85,247,0.25)}
+.bento-big{grid-column:span 2}
+.bento-wide{grid-column:span 2}
+.bento-icon{
+  font-family:'Unbounded',sans-serif;font-size:32px;font-weight:900;
+  color:var(--accent);letter-spacing:-0.04em;
+  margin-bottom:14px;line-height:1;
+}
+.bento-card h4{
+  font-family:'Unbounded',sans-serif;font-size:16px;font-weight:700;
+  margin-bottom:10px;letter-spacing:-0.02em;
+}
+.bento-card p{font-size:13px;color:var(--text-dim);line-height:1.6}
+
+/* ===== ISLAND — В СТИЛЕ ОСНОВНОГО САЙТА ===== */
+.island-section{padding:0 0 80px;position:relative;z-index:1}
+.island-velion{
+  position:relative;overflow:hidden;border-radius:28px;
+  background:linear-gradient(135deg,#05070A 0%,#080D12 50%,#060A0E 100%);
+  border:1px solid rgba(17,224,198,0.2);
+  box-shadow:0 0 80px -20px rgba(17,224,198,0.08),inset 0 1px 0 rgba(17,224,198,0.08);
+  padding:64px 60px;
+  display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center;
+}
+.island-velion::before{
+  content:'';position:absolute;
+  top:-40%;right:-20%;width:600px;height:600px;
+  background:radial-gradient(circle,rgba(17,224,198,0.08) 0%,transparent 65%);
+  pointer-events:none;
+}
+.island-velion::after{
+  content:'';position:absolute;
+  bottom:-30%;left:-10%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(17,224,198,0.04) 0%,transparent 65%);
+  pointer-events:none;
+}
+.island-content{position:relative;z-index:1}
+.island-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:11px;color:#11E0C6;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:6px 14px;border-radius:999px;
+  background:rgba(17,224,198,0.06);border:1px solid rgba(17,224,198,0.18);
+  margin-bottom:24px;
+}
+.island-badge-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#11E0C6;box-shadow:0 0 8px #11E0C6;
+  animation:pulse-teal 2s ease-in-out infinite;
+}
+@keyframes pulse-teal{0%,100%{opacity:1;box-shadow:0 0 8px #11E0C6}50%{opacity:0.5;box-shadow:0 0 18px #11E0C6}}
+.island-title{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(26px,3vw,40px);
+  font-weight:700;line-height:1.08;letter-spacing:-0.03em;
+  margin-bottom:20px;color:#F0F4F8;
+}
+.island-title .green{color:#11E0C6}
+.island-title .dim{color:rgba(240,244,248,0.45);font-weight:500}
+.island-desc{font-size:16px;color:rgba(240,244,248,0.6);line-height:1.65;margin-bottom:28px}
+.island-features{list-style:none;margin-bottom:32px}
+.island-features li{
+  font-size:14px;color:rgba(240,244,248,0.65);
+  padding:7px 0;display:flex;align-items:center;gap:12px;
+}
+.island-features li::before{
+  content:'✓';color:#11E0C6;font-weight:700;font-size:15px;
+}
+.island-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#11E0C6;color:#02110b;
+  padding:14px 26px;border-radius:12px;
+  font-weight:700;font-size:15px;
+  transition:all .2s;
+  box-shadow:0 8px 24px -8px rgba(17,224,198,0.45);
+}
+.island-btn:hover{
+  box-shadow:0 12px 32px -8px rgba(17,224,198,0.6);
+  transform:translateY(-2px);
+}
+.island-domain{
+  font-family:var(--mono);font-size:12px;color:rgba(17,224,198,0.5);
+  margin-top:16px;letter-spacing:0.05em;
+}
+.island-logo-row{
+  display:flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.island-logo-icon{
+  width:44px;height:44px;border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#11E0C6,#15C8FA);
+  box-shadow:0 4px 14px rgba(17,224,198,0.4);
+  font-family:'Unbounded',sans-serif;font-weight:900;font-size:20px;color:#02110b;
+  flex-shrink:0;
+}
+.island-logo-text{
+  font-family:'Unbounded',sans-serif;font-weight:700;font-size:18px;
+  color:#F0F4F8;letter-spacing:-0.02em;
+}
+.island-logo-text .dot{color:#11E0C6}
+.island-stats{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+.island-stat{
+  background:rgba(17,224,198,0.04);
+  border:1px solid rgba(17,224,198,0.12);
+  border-radius:16px;padding:22px;text-align:center;
+}
+.island-stat-num{
+  font-family:'Unbounded',sans-serif;font-size:28px;font-weight:800;
+  color:#11E0C6;letter-spacing:-0.03em;line-height:1;margin-bottom:6px;
+}
+.island-stat-label{
+  font-family:var(--mono);font-size:10px;color:rgba(240,244,248,0.4);
+  letter-spacing:0.05em;text-transform:uppercase;
+}
+
+/* ===== CTA ===== */
+.cta-section{
+  background:var(--bg-card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:72px 48px;
+  text-align:center;position:relative;overflow:hidden;
+}
+.cta-section::before{
+  content:'';position:absolute;
+  top:-50%;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;
+  background:radial-gradient(circle,rgba(168,85,247,0.10) 0%,transparent 65%);
+  pointer-events:none;
+}
+.cta-section>*{position:relative;z-index:1}
+.cta-section h2{
+  font-family:'Unbounded',sans-serif;
+  font-size:clamp(26px,3.5vw,44px);font-weight:600;
+  letter-spacing:-0.03em;line-height:1.08;margin-bottom:16px;
+}
+.cta-section h2 .accent{color:var(--accent)}
+.cta-section p{
+  font-size:17px;color:var(--text-dim);margin-bottom:32px;
+  max-width:520px;margin-left:auto;margin-right:auto;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  border-top:1px solid var(--line);
+  padding:56px 0 28px;margin-top:80px;
+  position:relative;z-index:1;
+}
+.footer-top{
+  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:40px;margin-bottom:48px;
+}
+.footer-logo-row{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-logo-icon{
+  width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  font-family:'Unbounded',sans-serif;font-weight:900;font-size:15px;color:#fff;
+  flex-shrink:0;
+}
+.footer-logo-text{
+  font-family:'Unbounded',sans-serif;font-weight:700;font-size:16px;
+}
+.footer-logo-text .lite{color:var(--accent);font-weight:500}
+.footer-tagline{font-size:13px;color:var(--text-muted);line-height:1.6;max-width:260px;margin-bottom:12px}
+.footer h5{
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px;
+}
+.footer a{
+  display:block;font-size:13px;color:var(--text-dim);
+  margin-bottom:9px;transition:color .2s;
+}
+.footer a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--line);padding-top:20px;
+  display:flex;justify-content:space-between;
+  font-family:var(--mono);font-size:10px;color:var(--text-muted);
+  flex-wrap:wrap;gap:10px;
+}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .ham{display:flex}
+  .nav-links{display:none}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stat{border-bottom:1px solid var(--line)}
+  .hero-stat:nth-child(2){border-right:none}
+  .hero-stat:nth-child(3),.hero-stat:nth-child(4){border-bottom:none}
+  .products-grid{grid-template-columns:1fr}
+  .product.size-big{grid-column:span 1}
+  .steps{grid-template-columns:1fr 1fr;gap:32px}
+  .steps::before{display:none}
+  .bento{grid-template-columns:1fr 1fr}
+  .bento-big,.bento-wide{grid-column:span 2}
+  .island-velion{grid-template-columns:1fr;padding:40px 28px;gap:32px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .cta-section{padding:48px 24px}
+}
+@media(max-width:600px){
+  .hero h1{font-size:32px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%;justify-content:center}
+  .bento{grid-template-columns:1fr}
+  .bento-big,.bento-wide{grid-column:span 1}
+  .island-stats{grid-template-columns:1fr 1fr}
+  .section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo">
+      <div class="logo-icon">V</div>
+      <div>
+        <div class="logo-text">VELION <span class="lite">LITE</span></div>
+        <span class="logo-sub">// FAST · SIMPLE · AFFORDABLE</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#products">Услуги</a>
+      <a href="#how">Процесс</a>
+      <a href="#why">Почему мы</a>
+      <a href="#parent">Velion Agency</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://t.me/velion_manager" class="btn btn-primary">Написать →</a>
+      <button class="ham" id="ham" onclick="toggleMob()" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mob-menu">
+  <div class="mob-drawer">
+    <a href="#products" class="mob-link" onclick="closeMob()">Услуги</a>
+    <a href="#how" class="mob-link" onclick="closeMob()">Процесс</a>
+    <a href="#why" class="mob-link" onclick="closeMob()">Почему мы</a>
+    <a href="#parent" class="mob-link" onclick="closeMob()">Velion Agency</a>
+    <div class="mob-divider"></div>
+    <a href="https://t.me/velion_manager" class="btn btn-primary" style="width:100%;margin-top:4px">Написать в Telegram →</a>
+  </div>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-eyebrow">VELION LITE · Быстро и доступно</div>
+    <h1>Боты, сайты<br>и <span class="accent">AI-агенты</span><br><span class="dim">от 3 000 ₽</span></h1>
+    <p class="hero-sub">Делаем простые цифровые продукты за 1–7 дней. Без ТЗ на 30 страниц — пишите в Telegram, назовём цену за 15 минут.</p>
+    <div class="hero-cta">
+      <a href="https://t.me/velion_manager" class="btn btn-primary" style="font-size:15px;padding:14px 28px">Описать задачу →</a>
+      <a href="#products" class="btn btn-ghost" style="font-size:15px;padding:14px 28px">Посмотреть услуги</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat reveal">
+        <div class="hero-stat-num">3K₽</div>
+        <div class="hero-stat-label">от 3 000 ₽</div>
+      </div>
+      <div class="hero-stat reveal">
+        <div class="hero-stat-num">1–7</div>
+        <div class="hero-stat-label">дней срок</div>
+      </div>
+      <div class="hero-stat reveal">
+        <div class="hero-stat-num">30</div>
+        <div class="hero-stat-label">дней поддержка</div>
+      </div>
+      <div class="hero-stat reveal">
+        <div class="hero-stat-num">×20</div>
+        <div class="hero-stat-label">дешевле студий</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>TELEGRAM BOT · LANDING PAGE · AI AUTOMATION · N8N WORKFLOW · CRM INTEGRATION · CHATGPT BOT · FUNNEL · TILDA · AMOCRM · FAST DELIVERY · FIXED PRICE · TELEGRAM BOT · LANDING PAGE · AI AUTOMATION · N8N WORKFLOW · CRM INTEGRATION · CHATGPT BOT · FUNNEL · TILDA · AMOCRM · FAST DELIVERY · FIXED PRICE · </span>
+    <span>TELEGRAM BOT · LANDING PAGE · AI AUTOMATION · N8N WORKFLOW · CRM INTEGRATION · CHATGPT BOT · FUNNEL · TILDA · AMOCRM · FAST DELIVERY · FIXED PRICE · TELEGRAM BOT · LANDING PAGE · AI AUTOMATION · N8N WORKFLOW · CRM INTEGRATION · CHATGPT BOT · FUNNEL · TILDA · AMOCRM · FAST DELIVERY · FIXED PRICE · </span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">// 01 — SERVICES</div>
+      <h2 class="section-title">Что делаем <span class="accent">быстро и дёшево</span></h2>
+      <p class="section-sub">Фиксированные цены, фиксированные сроки. Никаких сюрпризов в счёте.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product size-big reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_01 · TELEGRAM BOT</span>
+          <span class="product-time">⏱ 1–2 дня</span>
+        </div>
+        <h3>Бот-визитка в Telegram</h3>
+        <p class="product-desc">Меню услуг, прайс, форма заявки. Клиент пишет — вы получаете уведомление с контактом и запросом. Идеально для эксперта, мастера или микробизнеса.</p>
+        <ul class="product-features">
+          <li>5–8 кнопок в меню</li>
+          <li>Приём заявок и уведомления</li>
+          <li>Деплой и настройка под ключ</li>
+        </ul>
+        <div class="product-foot">
+          <div class="product-price">от 3 000 ₽<small>FIXED PRICE</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует бот-визитка" class="product-arrow">→</a>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_02 · BOT + CRM</span>
+          <span class="product-time">⏱ 2–3 дня</span>
+        </div>
+        <h3>Бот с записью клиентов</h3>
+        <p class="product-desc">Сценарии записи, валидация телефона, выгрузка в Google Sheets или amoCRM.</p>
+        <div class="product-foot">
+          <div class="product-price">от 6 000 ₽<small>FIXED PRICE</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует бот с записью" class="product-arrow">→</a>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_03 · AI BOT</span>
+          <span class="product-time">⏱ 3–5 дней</span>
+        </div>
+        <h3>AI-бот с базой знаний</h3>
+        <p class="product-desc">Бот на ChatGPT/Claude отвечает по вашим документам и FAQ. RAG, контекст, лог диалогов.</p>
+        <div class="product-foot">
+          <div class="product-price">от 10 000 ₽<small>FIXED PRICE</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует AI-бот" class="product-arrow">→</a>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_04 · LANDING</span>
+          <span class="product-time">⏱ 2–4 дня</span>
+        </div>
+        <h3>Лендинг на Tilda</h3>
+        <p class="product-desc">Одностраничник под услугу, эксперта или мероприятие. Адаптив, формы, Метрика.</p>
+        <div class="product-foot">
+          <div class="product-price">от 7 000 ₽<small>+ тариф Tilda</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует лендинг" class="product-arrow">→</a>
+        </div>
+      </div>
+      <div class="product reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_05 · FUNNEL</span>
+          <span class="product-time">⏱ 3–5 дней</span>
+        </div>
+        <h3>Воронка для инфобиза</h3>
+        <p class="product-desc">Прогревающая серия, сегментация, продажа курса. На BotHelp или Salebot.</p>
+        <div class="product-foot">
+          <div class="product-price">от 8 000 ₽<small>+ конструктор</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует воронка" class="product-arrow">→</a>
+        </div>
+      </div>
+      <div class="product size-big reveal">
+        <div class="product-head">
+          <span class="product-id">PRD_06 · AUTOMATION</span>
+          <span class="product-time">⏱ 3–7 дней</span>
+        </div>
+        <h3>Автоматизация на n8n</h3>
+        <p class="product-desc">Связываем сервисы в один поток: заявки → CRM → таблицы → мессенджеры → почта. Экономит 10–30 часов рутины в неделю.</p>
+        <ul class="product-features">
+          <li>До 5 интеграций в одном потоке</li>
+          <li>Webhook, триггеры, расписания</li>
+          <li>Self-hosted или облако n8n</li>
+        </ul>
+        <div class="product-foot">
+          <div class="product-price">от 10 000 ₽<small>FIXED PRICE</small></div>
+          <a href="https://t.me/velion_manager?text=Интересует автоматизация" class="product-arrow">→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHY -->
+<section class="section" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="label">// 03 — WHY US</div>
+      <h2 class="section-title">Дешевле и быстрее <span class="accent">средней студии</span></h2>
+      <p class="section-sub">Двое разработчиков без накладных расходов — нам не нужно умножать ваш счёт на офис и менеджеров.</p>
+    </div>
+    <div class="bento">
+      <div class="bento-card bento-big reveal">
+        <div class="bento-icon">×20</div>
+        <h4>Дешевле студий</h4>
+        <p>Студия делает простой бот 3 недели и берёт от 200 000 ₽. Мы делаем тот же бот за 3 дня и берём 3–10 000 ₽. Разница не в качестве — в маржинальности студии.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon">×7</div>
+        <h4>Быстрее</h4>
+        <p>От 1 дня. Без бюрократии и согласований.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon">2</div>
+        <h4>Разработчика</h4>
+        <p>Пишете напрямую тем, кто делает код.</p>
+      </div>
+      <div class="bento-card bento-wide reveal">
+        <div class="bento-icon">30</div>
+        <h4>Дней поддержки бесплатно</h4>
+        <p>После сдачи правим баги, дописываем мелочи, дообучаем модель — всё в рамках цены.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon">RAG</div>
+        <h4>AI без галлюцинаций</h4>
+        <p>Не «приклеим ChatGPT» — настроенная модель с базой знаний и тестами.</p>
+      </div>
+      <div class="bento-card reveal">
+        <div class="bento-icon">⚙</div>
+        <h4>Прозрачно</h4>
+        <p>Все цены финальные. Без скрытых доплат.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ISLAND — В СТИЛЕ ОСНОВНОГО САЙТА -->
+<section class="island-section" id="parent">
+  <div class="wrap">
+    <div class="island-velion">
+      <div class="island-content">
+        <div class="island-logo-row">
+          <div class="island-logo-icon">V</div>
+          <div class="island-logo-text">velion<span class="dot">.</span></div>
+        </div>
+        <div class="island-badge">
+          <span class="island-badge-dot"></span>
+          ОСНОВНОЙ БРЕНД
+        </div>
+        <h2 class="island-title">
+          Нужно <span class="green">больше</span>?<br>
+          <span class="dim">Есть старший бренд.</span>
+        </h2>
+        <p class="island-desc">
+          Если задача сложнее: корпоративные сайты, ИИ-агенты с CRM, длинные проекты — это <strong style="color:#F0F4F8">Velion Agency</strong>, наш основной бренд. Те же два разработчика, но другой уровень.
+        </p>
+        <ul class="island-features">
+          <li>Премиум-сайты с конверсией +30–70%</li>
+          <li>ИИ-агенты с интеграцией в CRM и 1С</li>
+          <li>Полное сопровождение и поддержка</li>
+          <li>50+ реализованных проектов</li>
+        </ul>
+        <a href="https://velionagency.online" target="_blank" class="island-btn">
+          Открыть velionagency.online →
+        </a>
+        <div class="island-domain">// velionagency.online</div>
+      </div>
+      <div class="island-stats">
+        <div class="island-stat reveal">
+          <div class="island-stat-num">50+</div>
+          <div class="island-stat-label">проектов</div>
+        </div>
+        <div class="island-stat reveal">
+          <div class="island-stat-num">+70%</div>
+          <div class="island-stat-label">к конверсии</div>
+        </div>
+        <div class="island-stat reveal">
+          <div class="island-stat-num">7–14</div>
+          <div class="island-stat-label">дней срок</div>
+        </div>
+        <div class="island-stat reveal">
+          <div class="island-stat-num">24/7</div>
+          <div class="island-stat-label">ИИ-агенты</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-section">
+      <div class="label">// READY?</div>
+      <h2>Опишите задачу — скажем<br>цену <span class="accent">за 15 минут</span></h2>
+      <p>Без обязательств, без созвонов, без анкет на 100 вопросов. Просто напишите что нужно — и получите ответ.</p>
+      <a href="https://t.me/velion_manager" class="btn btn-primary" style="font-size:15px;padding:14px 28px">Написать в Telegram →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo-row">
+          <div class="footer-logo-icon">V</div>
+          <div class="footer-logo-text">VELION <span class="lite">LITE</span></div>
+        </div>
+        <p class="footer-tagline">Боты, сайты и AI-автоматизация для малого бизнеса. От 3 000 ₽, срок 2–7 дней.</p>
+      </div>
+      <div>
+        <h5>// Услуги</h5>
+        <a href="#products">Telegram-боты</a>
+        <a href="#products">Лендинги</a>
+        <a href="#products">AI-автоматизация</a>
+        <a href="#products">Воронки</a>
+      </div>
+      <div>
+        <h5>// Связаться</h5>
+        <a href="https://t.me/velion_manager">Telegram</a>
+        <a href="mailto:velion.agency@gmail.com">velion.agency@gmail.com</a>
+      </div>
+      <div>
+        <h5>// Основной бренд</h5>
+        <a href="https://velionagency.online" target="_blank">velionagency.online</a>
+        <a href="https://velionagency.online#cases" target="_blank">Кейсы агентства</a>
+        <a href="https://t.me/velion_portfolio" target="_blank">Портфолио в TG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Velion Lite · сделано двумя разработчиками</div>
+      <div>v2.0 · redesign 06.2026</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMob(){
+  document.getElementById('mob-menu').classList.toggle('open');
+}
+function closeMob(){
+  document.getElementById('mob-menu').classList.remove('open');
+}
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
